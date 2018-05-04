@@ -1,6 +1,7 @@
 var express = require('express'),
     mongoose = require('mongoose'),
-    bodyParser=require('body-parser');
+    bodyParser=require('body-parser'),
+    path=require('path');
 
 var db;
 if(process.env.ENV=='Test')
@@ -20,14 +21,15 @@ app.use(bodyParser.json());
 
 bookRouter=require('./Routes/bookRoutes')(Book);
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/books',bookRouter);
 app.use('/api/authors',bookRouter);
 
 app.get('/',function(req,res){
-    res.send("Girdim.");
-});
-
+    res.sendFile(path.join(__dirname+'/index.html'));
+  });
+  
 app.listen(port,function(){
     console.log(port+' Portunda çalışıyor.');
 });

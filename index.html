@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Anasayfa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/my.css" />
+  <script src="js/my.js"></script>
+</head>
+
+<body ng-app="">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ağ Programlama Proje</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Anasayfa</a>
+          </li>
+          <li>
+            <a href="#about">Hakkında</a>
+          </li>
+          <li>
+            <a href="#contact">İletişim</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="starter-template">
+      <div class="row">
+          <button type="submit" id="tikla">Tıkla</button>
+      </div>
+
+      <input type="text" ng-model="title" id="titlein">
+      <input type="text" ng-model="genre" id="genrein">
+      <input type="text" ng-model="author" id="authorin">
+      <div class="row">
+        <div class="col-4" id="titleid">{{title}}</div>
+        <div class="col-4" id="genreid">{{genre}}</div>
+        <div class="col-4" id="authorid">{{author}}</div>
+      </div>
+    </div>
+    <div class="menu">
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+
+  <!-- Bootstrap core JavaScript
+          ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
